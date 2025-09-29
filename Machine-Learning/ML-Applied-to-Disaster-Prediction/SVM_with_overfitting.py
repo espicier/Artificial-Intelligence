@@ -1,9 +1,9 @@
 import pandas as pd
 from sklearn.svm import SVC
+from nettoyage_donnees import nettoyage
 
 # Ouvre le fichier et le nettoie
-train_df = pd.read_csv('train.csv')
-train_df = nettoyage(train_df)
+train_df = nettoyage('train.csv')
 
 # Prépare les données pour le modèle sklearn.svm
 X = train_df[['PassengerId', 'Sex', 'Pclass', 'Age', 'Fare', 'Embarked',
