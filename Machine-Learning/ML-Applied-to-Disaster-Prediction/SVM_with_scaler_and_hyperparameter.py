@@ -3,8 +3,7 @@ from sklearn.svm import SVC
 from sklearn.preprocessing import StandardScaler
 
 # Ouvre le fichier et le nettoie
-train_df = pd.read_csv('train.csv')
-train_df = nettoyage(train_df)
+train_df = nettoyage('train.csv')
 
 # Prépare les données pour le modèle sklearn.svm
 X = train_df[['PassengerId', 'Sex', 'Pclass', 'Age', 'Fare', 'Embarked',
